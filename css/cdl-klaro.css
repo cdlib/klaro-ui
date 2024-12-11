@@ -1,0 +1,13 @@
+/* Light theme by default, dark theme if system dark mode active */
+
+@import 'main.css';
+
+@media (prefers-color-scheme: dark) {
+  .cookie-notice {
+    --modal-bg: var(--color-black-blue);
+    --main-text: white;
+    --link-text: var(--color-light-blue);
+    --button-success-bg: var(--color-gold);
+    --button-success-text: black;
+  }
+}

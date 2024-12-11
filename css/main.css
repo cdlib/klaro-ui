@@ -1,0 +1,94 @@
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+  --color-blue: oklch(from steelblue calc(l - 16%) c h);
+  --color-gold: oklch(from orange l c calc(h + 10));
+  --color-tan: oklch(from antiquewhite l calc(c - 0.025) h);
+  --color-black-blue: oklch(from steelblue calc(l - 35%) calc(c - 0.05) h);
+  --color-light-blue: oklch(from deepskyblue calc(l - 5%) c h);
+}
+
+/***** Klaro cookie notice CSS classes with custom styles *****/
+
+/* Modal body */
+
+.cookie-notice {
+  /* Colors for light theme (default) */
+  --modal-bg: var(--color-tan);
+  --main-text: black;
+  --link-text: var(--color-blue);
+  --button-success-bg: var(--color-blue);
+  --button-success-text: white;
+
+  position: fixed;
+  inset: auto 0 0;
+  background-color: var(--modal-bg);
+}
+
+/* Text */
+
+.cn-body {
+  padding: 1.5rem;
+  color: var(--main-text);
+
+  h1 {
+    margin: unset;
+    color: currentcolor;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: currentcolor;
+    line-height: 1.5;
+  }
+
+  a {
+    color: var(--link-text);
+    text-decoration: underline;
+  }
+
+  > p {
+    margin: unset;
+  }
+}
+
+/* Button main container */
+
+.cn-buttons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2rem);
+  margin-block-start: 1.5rem;
+}
+
+/* Both buttons */
+
+.cm-btn {
+  flex-basis: 50%;
+  max-inline-size: 15rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+}
+
+/* Individual buttons */
+
+.cm-btn-danger {
+  border: 1px solid var(--main-text);
+  background-color: transparent;
+  color: var(--main-text);
+}
+
+.cm-btn-success {
+  border: 1px solid var(--button-success-bg);
+  background-color: var(--button-success-bg);
+  color: var(--button-success-text);
+}
+
+@media (width >= 64rem) {
+  .cookie-notice {
+    inset: auto 1.5rem 1.5rem auto;
+    max-inline-size: 37rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem oklch(0% 0 0deg / 40%);
+  }
+}
