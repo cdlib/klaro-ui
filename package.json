@@ -1,0 +1,73 @@
+{
+  "name": "cdl-klaro",
+  "version": "1.0.0",
+  "description": "The Klaro consent manager custom UI for the California Digital Library",
+  "source": [
+    "src/index.html",
+    "css/cdl-Klaro.css",
+    "css/cdl-klaro-light.css",
+    "css/cdl-klaro-dark.css"
+  ],
+  "scripts": {
+    "start": "npm-run-all clean --parallel parcel-dev watchstyles watchjs --silent",
+    "build": "run-s clean parcel-build lintstyles lintjs --silent",
+    "clean": "del dist",
+    "parcel-dev": "parcel",
+    "parcel-build": "parcel build --no-source-maps",
+    "watchstyles": "onchange -i 'css/**/*.css' -- npm run lintstyles",
+    "watchjs": "onchange -i js/* -- npm run lintjs",
+    "lintstyles": "stylelint 'css/**/*.css' '!css/main.css'",
+    "lintjs": "standard js/* --verbose | snazzy || exit 0",
+    "update-caniuse-lite": "npx update-browserslist-db@latest",
+    "format-js": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdlib/klaro.git"
+  },
+  "author": "JoelCDL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdlib/klaro/issues"
+  },
+  "homepage": "https://github.com/cdlib/klaro#readme",
+  "engines": {
+    "node": "~20",
+    "npm": "~10"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.3.0",
+    "buffer": "^6.0.3",
+    "del-cli": "^6.0.0",
+    "modern-normalize": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "parcel": "^2.13.2",
+    "snazzy": "^9.0.0",
+    "standard": "^17.1.0",
+    "stylelint": "^16.8.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard": "^36.0.1"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "stylelint": {
+    "defaultSeverity": "warning",
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-property-sort-order-smacss"
+    ],
+    "rules": {
+      "import-notation": null,
+      "max-nesting-depth": 2,
+      "no-descending-specificity": null,
+      "selector-class-pattern": [
+        "^([a-z][a-z0-9]*)(-[a-z0-9]+)*((__([a-z][a-z0-9]*)(-[a-z0-9]+)*)?(--([a-z][a-z0-9]*)(-[a-z0-9]+)*)?)$",
+        {
+          "message": "Expected class pattern to be BEM style"
+        }
+      ]
+    }
+  }
+}
