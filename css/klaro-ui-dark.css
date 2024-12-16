@@ -1,6 +1,6 @@
 /* Dark theme only */
 
-@import 'main.css';
+@import 'base.css';
 
 .cookie-notice {
   --modal-bg: var(--color-black-blue);

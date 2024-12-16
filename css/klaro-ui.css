@@ -1,6 +1,6 @@
 /* Light theme by default, dark theme if system dark mode active */
 
-@import 'main.css';
+@import 'base.css';
 
 @media (prefers-color-scheme: dark) {
   .cookie-notice {

@@ -16,7 +16,7 @@
     "parcel-build": "parcel build --no-source-maps",
     "watchstyles": "onchange -i 'css/**/*.css' -- npm run lintstyles",
     "watchjs": "onchange -i js/* -- npm run lintjs",
-    "lintstyles": "stylelint 'css/**/*.css' '!css/main.css'",
+    "lintstyles": "stylelint 'css/**/*.css' '!css/base.css'",
     "lintjs": "standard js/* --verbose | snazzy || exit 0",
     "update-caniuse-lite": "npx update-browserslist-db@latest",
     "format-js": "standard --fix"
