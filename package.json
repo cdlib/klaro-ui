@@ -2,18 +2,16 @@
   "name": "klaro-ui",
   "version": "1.0.0",
   "description": "The Klaro consent manager custom UI for the California Digital Library",
-  "source": [
-    "src/index.html",
-    "css/klaro-ui.css",
-    "css/klaro-ui-light.css",
-    "css/klaro-ui-dark.css"
-  ],
   "scripts": {
-    "start": "npm-run-all clean --parallel parcel-dev watchstyles watchjs --silent",
-    "build": "run-s clean parcel-build lintstyles lintjs --silent",
-    "clean": "del dist",
-    "parcel-dev": "parcel",
-    "parcel-build": "parcel build --no-source-maps",
+    "start": "npm-run-all clean-dev --parallel parcel-dev watchstyles watchjs --silent",
+    "build": "run-s clean-build parcel-build lintstyles lintjs --silent",
+    "publish": "run-s clean-publish parcel-publish --silent",
+    "clean-dev": "del dev",
+    "clean-build": "del dist",
+    "clean-publish": "del pub",
+    "parcel-dev": "parcel src/index.html --dist-dir dev",
+    "parcel-build": "parcel build 'css/[!base]*.css' --dist-dir dist --no-source-maps --no-cache",
+    "parcel-publish": "parcel build src/index.html --dist-dir pub --public-url ./ --no-source-maps --no-cache",
     "watchstyles": "onchange -i 'css/**/*.css' -- npm run lintstyles",
     "watchjs": "onchange -i js/* -- npm run lintjs",
     "lintstyles": "stylelint 'css/**/*.css' '!css/base.css'",
@@ -69,5 +67,8 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "klaro": "^0.7.21"
   }
 }

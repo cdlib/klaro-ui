@@ -1,4 +1,6 @@
-var klaroConfig = { // eslint-disable-line no-var, no-unused-vars
+import * as Klaro from 'klaro/dist/klaro-no-css'
+
+const config = {
   htmlTexts: true,
   embedded: false,
   cookieExpiresAfterDays: 30,
@@ -144,3 +146,7 @@ var klaroConfig = { // eslint-disable-line no-var, no-unused-vars
     )
   }
 }
+
+window.klaro = Klaro
+window.klaroConfig = config
+Klaro.setup(config)

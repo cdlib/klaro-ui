@@ -1,4 +1,5 @@
-dist
+dev
 .DS_Store
 node_modules
 .parcel-cache
+pub
