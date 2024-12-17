@@ -16,6 +16,7 @@
     "watch:js": "onchange -i js/* -- npm run lint:js",
     "lint:styles": "stylelint 'css/*.css'",
     "lint:js": "standard js/* --verbose | snazzy || exit 0",
+    "prepare": "npm run build",
     "test": "http-server deploy",
     "update-caniuse-lite": "npx update-browserslist-db@latest",
     "format-js": "standard --fix"
