@@ -1,11 +1,11 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
 :root {
-  --color-blue: oklch(from steelblue calc(l - 16%) c h);
-  --color-gold: oklch(from orange l c calc(h + 10));
-  --color-tan: oklch(from antiquewhite l calc(c - 0.025) h);
-  --color-black-blue: oklch(from steelblue calc(l - 35%) calc(c - 0.05) h);
-  --color-light-blue: oklch(from deepskyblue calc(l - 5%) c h);
+  --klaro-ui-color-blue: oklch(from steelblue calc(l - 16%) c h);
+  --klaro-ui-color-gold: oklch(from orange l c calc(h + 10));
+  --klaro-ui-color-tan: oklch(from antiquewhite l calc(c - 0.025) h);
+  --klaro-ui-color-black-blue: oklch(from steelblue calc(l - 35%) calc(c - 0.05) h);
+  --klaro-ui-color-light-blue: oklch(from deepskyblue calc(l - 5%) c h);
 }
 
 /***** Klaro cookie notice CSS classes with custom styles *****/
@@ -14,23 +14,23 @@
 
 .cookie-notice {
   /* Colors for light theme (default) */
-  --modal-bg: var(--color-tan);
-  --main-text: black;
-  --link-text: var(--color-blue);
-  --button-success-bg: var(--color-blue);
-  --button-success-text: white;
+  --klaro-ui-modal-bg: var(--klaro-ui-color-tan);
+  --klaro-ui-main-text: black;
+  --klaro-ui-link-text: var(--klaro-ui-color-blue);
+  --klaro-ui-button-success-bg: var(--klaro-ui-color-blue);
+  --klaro-ui-button-success-text: white;
 
   position: fixed;
   inset: auto 0 0;
   z-index: 999;
-  background-color: var(--modal-bg);
+  background-color: var(--klaro-ui-modal-bg);
 }
 
 /* Text */
 
 .cn-body {
   padding: 1.5rem;
-  color: var(--main-text);
+  color: var(--klaro-ui-main-text);
 
   h1 {
     margin: unset;
@@ -45,7 +45,7 @@
   }
 
   a {
-    color: var(--link-text);
+    color: var(--klaro-ui-link-text);
     text-decoration: underline;
   }
 
@@ -80,15 +80,15 @@
 /* Individual buttons */
 
 .cm-btn-danger {
-  border: 1px solid var(--main-text);
+  border: 1px solid var(--klaro-ui-main-text);
   background-color: transparent;
-  color: var(--main-text);
+  color: var(--klaro-ui-main-text);
 }
 
 .cm-btn-success {
-  border: 1px solid var(--button-success-bg);
-  background-color: var(--button-success-bg);
-  color: var(--button-success-text);
+  border: 1px solid var(--klaro-ui-button-success-bg);
+  background-color: var(--klaro-ui-button-success-bg);
+  color: var(--klaro-ui-button-success-text);
 }
 
 @media (width >= 64rem) {

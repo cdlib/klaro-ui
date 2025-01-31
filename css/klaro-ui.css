@@ -4,10 +4,10 @@
 
 @media (prefers-color-scheme: dark) {
   .cookie-notice {
-    --modal-bg: var(--color-black-blue);
-    --main-text: white;
-    --link-text: var(--color-light-blue);
-    --button-success-bg: var(--color-gold);
-    --button-success-text: black;
+    --klaro-ui-modal-bg: var(--klaro-ui-color-black-blue);
+    --klaro-ui-main-text: white;
+    --klaro-ui-link-text: var(--klaro-ui-color-light-blue);
+    --klaro-ui-button-success-bg: var(--klaro-ui-color-gold);
+    --klaro-ui-button-success-text: black;
   }
 }
