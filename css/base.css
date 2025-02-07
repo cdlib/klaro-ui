@@ -1,5 +1,3 @@
-@import '../node_modules/modern-normalize/modern-normalize.css';
-
 :root {
   --color-blue: oklch(from steelblue calc(l - 16%) c h);
   --color-gold: oklch(from orange l c calc(h + 10));
@@ -68,8 +66,10 @@
 .cm-btn {
   flex-basis: 50%;
   max-inline-size: 15rem;
-  padding: 0.8rem;
+  padding: 0.7rem;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 100%;
 
   &:focus,
   &:hover {
