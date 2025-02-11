@@ -1,6 +1,6 @@
 /* Dark theme only */
 
-@import 'base.css' layer(klaro-ui);
+@import 'base.css';
 
 @layer klaro-ui {
   .cookie-notice {

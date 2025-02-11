@@ -1,15 +1,21 @@
 /* Light theme by default, dark theme if system dark mode active */
 
-@import 'base.css' layer(klaro-ui);
+@import 'base.css';
 
-@layer klaro-ui {
-  @media (prefers-color-scheme: dark) {
-    .cookie-notice {
-      --modal-bg: var(--color-black-blue);
-      --main-text: white;
-      --link-text: var(--color-light-blue);
-      --button-success-bg: var(--color-gold);
-      --button-success-text: black;
-    }
+.cookie-notice {
+  --modal-bg: var(--color-tan);
+  --main-text: black;
+  --link-text: var(--color-blue);
+  --button-success-bg: var(--color-blue);
+  --button-success-text: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cookie-notice {
+    --modal-bg: var(--color-black-blue);
+    --main-text: white;
+    --link-text: var(--color-light-blue);
+    --button-success-bg: var(--color-gold);
+    --button-success-text: black;
   }
 }
