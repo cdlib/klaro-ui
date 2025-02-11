@@ -20,9 +20,10 @@
 .cn-body {
   padding: 1.5rem;
   color: var(--main-text);
+  font-size: medium;
 
   h1 {
-    margin: unset;
+    margin-block: 0 1rem;
     color: currentcolor;
     font-size: 1.3rem;
     font-weight: 600;
@@ -39,7 +40,7 @@
   }
 
   > p {
-    margin: unset;
+    margin: 0;
   }
 }
 
