@@ -1,8 +1,9 @@
 <?php
 /*
 Plugin Name:  Klaro UI
-Description:  Klaro consent manager styled for CDL that manages the Matomo service only.
+Description:  The Klaro consent manager and custom UI for the California Digital Library.
 Plugin URI:   https://github.com/cdlib/klaro-ui
+Version:      1.2.0
 */
 
 function add_klaro_ui_stylesheet_and_script() {
