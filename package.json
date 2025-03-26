@@ -10,8 +10,9 @@
     "prebuild": "del dist",
     "predeploy": "del deploy",
     "parcel:dev": "parcel src/index.html --dist-dir dev",
-    "parcel:build": "parcel build 'css/[!base]*.css' --dist-dir dist --no-source-maps --no-cache",
+    "parcel:build": "parcel build 'css/[!base]*.css' js/klaro-config.js --dist-dir dist --no-source-maps --no-cache",
     "parcel:deploy": "parcel build src/index.html --dist-dir deploy --public-url ./ --no-source-maps --no-cache",
+    "postbuild": "bestzip dist/klaro-ui-wordpress-plugin.zip dist/css/klaro-ui.css dist/js/klaro-config.js wordpress-plugin.php",
     "watch:styles": "onchange -i 'css/*.css' -- npm run lint:styles",
     "watch:js": "onchange -i js/* -- npm run lint:js",
     "lint:styles": "stylelint 'css/*.css'",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^9.3.0",
+    "bestzip": "^2.2.1",
     "buffer": "^6.0.3",
     "del-cli": "^6.0.0",
     "http-server": "^14.1.1",
