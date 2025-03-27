@@ -100,18 +100,6 @@ const config = {
       ],
 
       /*
-      You can define an optional callback function that will be called each time the
-      consent state for the given service changes. The consent value will be passed as
-      the first parameter to the function (true=consented). The `service` config will
-      be passed as the second parameter.
-      */
-      callback: function (consent, service) {
-        console.log(
-          'User consent for service ' + service.name + ': consent=' + consent
-        )
-      },
-
-      /*
       If 'required' is set to 'true', Klaro will not allow this service to be disabled
       by the user. Use this for services that are always required for your website to
       function (e.g. shopping cart cookies).
@@ -142,7 +130,7 @@ const config = {
   */
   callback: function (consent, service) {
     console.log(
-      'User consent for service ' + service.name + ': consent=' + consent
+      'User consent for service ' + service.name + ': ' + consent
     )
   }
 }
