@@ -2,12 +2,10 @@
 
 @import 'base.css';
 
-@layer klaro-ui {
-  .cookie-notice {
-    --modal-bg: var(--color-tan);
-    --main-text: black;
-    --link-text: var(--color-blue);
-    --button-success-bg: var(--color-blue);
-    --button-success-text: white;
-  }
+.cookie-notice {
+  --modal-bg: var(--color-tan);
+  --main-text: black;
+  --link-text: var(--color-blue);
+  --button-success-bg: var(--color-blue);
+  --button-success-text: white;
 }
