@@ -1,6 +1,6 @@
 {
   "name": "klaro-ui",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "The Klaro consent manager and custom UI for the California Digital Library",
   "scripts": {
     "start": "run-p parcel:dev watch:styles watch:js --silent",
