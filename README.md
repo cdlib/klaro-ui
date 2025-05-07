@@ -57,21 +57,21 @@ The following steps assume the Wordpress site is using the [Connect Matomo](http
 npm install https://github.com/cdlib/klaro-ui --save
 ```
 
-The module **klaro-ui** is now installed in your app or site's **node_modules** folder. This includes compiled stylesheets and a Klaro config JS file prebuilt for the Matomo service only.
+The module **klaro-ui** is now installed in your app or site's **node_modules** folder. This includes three compiled stylesheets and a Klaro config JS file prebuilt for the Matomo service only.
 
-1. From your bundler/build tool, source one of the three `klaro-ui` stylesheets. The stylesheet `klaro-ui` is recommended; see the [Appearance](https://github.com/cdlib/klaro-ui?tab=readme-ov-file#appearance) section below.
+1. From your bundler/build tool (webpack, Vite, Parcel, Rails asset pipeline, etc.), import one of the three `klaro-ui` stylesheets from within **klaro-ui/dist/**. Ignore the **klaro-ui/css/** prebuild files. The stylesheet `klaro-ui` is recommended over the other two options; see the [Appearance](https://github.com/cdlib/klaro-ui?tab=readme-ov-file#appearance) section below.
 
 ```
-/node_modules/klaro-ui/dist/klaro-ui.css
+import 'klaro-ui/dist/css/klaro-ui.css'
 ```
-2. Source the `klaro-config` script:
+2. Import the `klaro-config` script from within **klaro-ui/dist/**. Ignore the **klaro-ui/js/** prebuild files:
 ```
-/node_modules/klaro-ui/dist/klaro-config.js
+import 'klaro-ui/dist/js/klaro-config.js'
 ```
 
 3. Update the tracking code `<script>` tag using the example provided in the [Update Tracking Code](https://github.com/cdlib/klaro-ui/tree/dev?tab=readme-ov-file#update-tracking-code) section above.
 
-4. After relaunching your site, you will see Klaro appear on your website as in [this sample](https://cdlib.github.io/klaro-ui).
+4. After relaunching your site, you should see Klaro appear on your website as in [this sample](https://cdlib.github.io/klaro-ui).
 
 ### Installing for Matomo and Additional Services
 
@@ -85,21 +85,7 @@ This installation option requires creating your own Klaro configuration script a
 https://cdn.kiprotect.com/klaro/v0.7/klaro-no-css.js
 ```
 
-3. From your CLI, install Klaro UI into your app or site as a dependency:
-
-```
-npm install https://github.com/cdlib/klaro-ui --save
-```
-
-The module **klaro-ui** is now installed in your app or site's **node_modules** folder.
-
-4. From your bundler/build tool, source one of the three `klaro-ui` stylesheets. The stylesheet `klaro-ui` is recommended; see the Appearance section below.
-
-```
-/node_modules/klaro-ui/dist/klaro-ui.css
-```
-
-5. After relaunching your site, you will see Klaro appear on your website as in [this sample](https://cdlib.github.io/klaro-ui).
+3. Follow the steps for [installing Klaro UI as a node module](https://github.com/cdlib/klaro-ui?tab=readme-ov-file#installing-as-a-node-module). Skip the step for importing the `klaro-config` script.
 
 ## Verification
 
@@ -137,6 +123,6 @@ Klaro UI doesn't include any typefaces. The Klaro text will use the font already
 
 The default stylesheet **klaro-ui.css** renders a light colored theme when a user's system appearance is set to light colors and a dark colored theme when set to dark colors. This default appearance is recommended, as it's more accessible for users than the static light and dark themes listed below.
 
-For only the light colored theme, use **klaro-ui-light.css** within **klaro-ui/dist**.
+For only the light colored theme, use **klaro-ui-light.css** within **klaro-ui/dist/css**.
 
-For only the dark colored theme, use **klaro-ui-dark.css** within **klaro-ui/dist**.
+For only the dark colored theme, use **klaro-ui-dark.css** within **klaro-ui/dist/css**.
