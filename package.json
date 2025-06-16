@@ -37,17 +37,17 @@
     "npm": ">=10"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.7.0",
+    "@faker-js/faker": "^9.8.0",
     "bestzip": "^2.2.1",
     "buffer": "^6.0.3",
     "del-cli": "^6.0.0",
     "http-server": "^14.1.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "parcel": "^2.14.4",
+    "parcel": "^2.15.2",
     "snazzy": "^9.0.0",
     "standard": "^17.1.0",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "stylelint-config-property-sort-order-smacss": "^10.0.0",
     "stylelint-config-standard": "^38.0.0"
   },
