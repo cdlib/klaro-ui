@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name:  Klaro UI
-Description:  The Klaro consent manager and custom UI for the California Digital Library.
+Description:  The Klaro consent manager and custom user interface for the California Digital Library.
 Plugin URI:   https://github.com/cdlib/klaro-ui
-Version:      1.2.3
+Version:      1.2.4
 */
 
 function add_klaro_ui_stylesheet_and_script() {
